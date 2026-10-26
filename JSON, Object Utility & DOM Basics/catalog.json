@@ -1,0 +1,35 @@
+
+{
+  "storeName": "Bloom Store",
+  "currency": "INR",
+  "products": [
+    {
+      "id": 101,
+      "name": "Notebook",
+      "category": "Stationery",
+      "price": 50,
+      "stock": 100
+    },
+    {
+      "id": 102,
+      "name": "Pen",
+      "category": "Stationery",
+      "price": 10,
+      "stock": 200
+    },
+    {
+      "id": 103,
+      "name": "Backpack",
+      "category": "Accessories",
+      "price": 800,
+      "stock": 20
+    },
+    {
+      "id": 104,
+      "name": "Headphones",
+      "category": "Electronics",
+      "price": 1500,
+      "stock": 15
+    }
+  ]
+}

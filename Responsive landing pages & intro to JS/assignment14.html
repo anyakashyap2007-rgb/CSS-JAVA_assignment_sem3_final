@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Studio | Fashion</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #faf7f2;
+            color: #332b27;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: #faf7f2;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: #332b27;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #a16f56;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 60px 8%;
+            background: #eee4d9;
+        }
+
+        .hero-text {
+            max-width: 480px;
+        }
+
+        .hero-text span {
+            color: #9b7158;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 54px;
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        .hero p {
+            color: #71645a;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #4b3930;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background: #85634e;
+        }
+
+        .hero img {
+            width: 45%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 180px 180px 5px 5px;
+        }
+
+        /* Collection */
+        .collection {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        .collection h2 {
+            font-family: Georgia, serif;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .collection > p {
+            color: #81746a;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px #00000015;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 18px 0 8px;
+            font-family: Georgia, serif;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #81746a;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: #332b27;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+            line-height: 1.8;
+        }
+
+        /* Tablet */
+        @media (max-width: 800px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero img {
+                height: 330px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 550px) {
+            nav {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 6%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero img {
+                width: 100%;
+                height: 320px;
+            }
+
+            .collection {
+                padding: 45px 6%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">LUNA STUDIO</div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <span>New Season · New Stories</span>
+
+            <h1>Style that feels like you.</h1>
+
+            <p>
+                Discover thoughtfully selected pieces that
+                bring comfort, confidence, and effortless
+                elegance into your everyday wardrobe.
+            </p>
+
+            <a href="#collection" class="button">Explore Collection</a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900"
+            alt="Fashion collection">
+    </section>
+
+    <section class="collection" id="collection">
+        <h2>Our Collection</h2>
+        <p>Simple pieces. Timeless style.</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600"
+                    alt="Casual fashion">
+                <h3>Everyday Wear</h3>
+                <p>Comfort meets effortless style.</p>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600"
+                    alt="Elegant clothing">
+                <h3>Modern Classics</h3>
+                <p>Pieces that never go out of style.</p>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=600"
+                    alt="Minimal fashion">
+                <h3>Minimal Edit</h3>
+                <p>Less, but better.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>LUNA STUDIO</h3>
+        <p>Find your style. Make it your own.</p>
+        <p>© 2026 Luna Studio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

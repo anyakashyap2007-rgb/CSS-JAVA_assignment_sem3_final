@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8eff3;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .login-card {
+            width: 350px;
+            max-width: 100%;
+            padding: 32px;
+            background: white;
+            border: 1px solid #ead5df;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px #49304415;
+        }
+
+        h1 {
+            text-align: center;
+            color: #713d5c;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #927d8b;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: #493044;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dfc8d5;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #a45d80;
+            box-shadow: 0 0 0 3px #f1dce6;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #713d5c;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #a45d80;
+        }
+
+        .signup {
+            text-align: center;
+            margin-top: 20px;
+            color: #786675;
+            font-size: 13px;
+        }
+
+        .signup a {
+            color: #a45d80;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 400px) {
+            .login-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+        <h1>Welcome Back ♡</h1>
+        <p class="subtitle">Sign in to continue</p>
+
+        <form>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login →
+            </button>
+        </form>
+
+        <p class="signup">
+            Don't have an account?
+            <a href="#">Sign up</a>
+        </p>
+    </div>
+
+</body>
+</html>

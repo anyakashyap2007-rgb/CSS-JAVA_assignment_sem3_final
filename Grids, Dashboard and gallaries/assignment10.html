@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments | Photo Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f6f1e9;
+            color: #382f2a;
+        }
+
+        header {
+            text-align: center;
+            padding: 45px 20px 30px;
+        }
+
+        header p {
+            color: #967b69;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        header .subtitle {
+            color: #83766c;
+            letter-spacing: 0;
+            text-transform: none;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 25px 60px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .photo {
+            background: #fffdf9;
+            padding: 10px 10px 18px;
+            border-radius: 4px;
+            box-shadow: 0 5px 18px #382f2a12;
+            transition: transform 0.35s, box-shadow 0.35s;
+        }
+
+        .photo:hover {
+            transform: translateY(-6px) rotate(-1deg);
+            box-shadow: 0 12px 25px #382f2a20;
+        }
+
+        .photo img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .photo h2 {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            font-weight: normal;
+            margin: 15px 8px 6px;
+        }
+
+        .photo p {
+            color: #8c7b70;
+            font-size: 13px;
+            margin: 0 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #83766c;
+            border-top: 1px solid #e5dace;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+
+            .photo img {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .photo img {
+                height: 280px;
+            }
+
+            header {
+                padding-top: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p>A little visual diary</p>
+        <h1>Moments in Time</h1>
+        <p class="subtitle">
+            Little things, beautiful memories, quiet moments.
+        </p>
+    </header>
+
+    <main class="gallery">
+
+        <article class="photo">
+            <img
+                src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=80"
+                alt="Soft pink flowers in bloom">
+            <h2>Flowers & Feelings</h2>
+            <p>Finding beauty in little things.</p>
+        </article>
+
+        <article class="photo">
+            <img
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=700&q=80"
+                alt="Golden sunlight over a peaceful landscape">
+            <h2>Golden Mornings</h2>
+            <p>A fresh start, every day.</p>
+        </article>
+
+        <article class="photo">
+            <img
+                src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=700&q=80"
+                alt="Books arranged for a quiet reading session">
+            <h2>Slow Living</h2>
+            <p>Making time for yourself.</p>
+        </article>
+
+        <article class="photo">
+            <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80"
+                alt="Sunlight passing through a green forest">
+            <h2>Into the Woods</h2>
+            <p>A little escape into nature.</p>
+        </article>
+
+        <article class="photo">
+            <img
+                src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=700&q=80"
+                alt="A cozy desk and creative workspace">
+            <h2>Creative Corners</h2>
+            <p>Where ideas come to life.</p>
+        </article>
+
+        <article class="photo">
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+                alt="A scenic landscape beneath an open sky">
+            <h2>Somewhere New</h2>
+            <p>Collecting places, not things.</p>
+        </article>
+
+    </main>
+
+    <footer>
+        A gallery of little moments · © 2026
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Store | Products</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f5f0;
+            color: #302a27;
+        }
+
+        header {
+            background: #352d2a;
+            color: #fff8f0;
+            padding: 24px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h1 {
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+
+        header span {
+            color: #d8b9a5;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 45px 20px 30px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #786d66;
+            line-height: 1.6;
+        }
+
+        .products {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 25px 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px #352d2a12;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px #352d2a20;
+        }
+
+        .product-image {
+            height: 210px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 75px;
+            background: #eee2d8;
+        }
+
+        .product-card:nth-child(2) .product-image {
+            background: #e4e7d9;
+        }
+
+        .product-card:nth-child(3) .product-image {
+            background: #eadde5;
+        }
+
+        .product-info {
+            padding: 22px;
+        }
+
+        .category {
+            color: #9b7560;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .product-info h3 {
+            font-size: 20px;
+            margin: 8px 0;
+        }
+
+        .description {
+            color: #7b716b;
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 45px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .buy-btn {
+            border: none;
+            background: #493b35;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #9b7560;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            background: #352d2a;
+            color: #e8d9ce;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+                max-width: 380px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>BLOOM<span>.</span></h1>
+        <p>Thoughtful things, beautifully made.</p>
+    </header>
+
+    <section class="hero">
+        <h2>Our Little Collection</h2>
+        <p>Discover simple pieces that make everyday life special.</p>
+    </section>
+
+    <main class="products">
+
+        <article class="product-card">
+            <div class="product-image">🌷</div>
+            <div class="product-info">
+                <span class="category">Handmade</span>
+                <h3>Floral Keychain</h3>
+                <p class="description">
+                    A cute handmade flower to brighten your everyday essentials.
+                </p>
+                <div class="price-row">
+                    <span class="price">₹149</span>
+                    <button class="buy-btn">Shop Now</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">🌿</div>
+            <div class="product-info">
+                <span class="category">Lifestyle</span>
+                <h3>Leaf Bookmark</h3>
+                <p class="description">
+                    A delicate bookmark for readers who love little details.
+                </p>
+                <div class="price-row">
+                    <span class="price">₹99</span>
+                    <button class="buy-btn">Shop Now</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">🌸</div>
+            <div class="product-info">
+                <span class="category">Accessories</span>
+                <h3>Flower Hair Clip</h3>
+                <p class="description">
+                    Add a soft floral touch to your daily hairstyle.
+                </p>
+                <div class="price-row">
+                    <span class="price">₹129</span>
+                    <button class="buy-btn">Shop Now</button>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        © 2026 Bloom Store · Made with love
+    </footer>
+
+</body>
+</html>

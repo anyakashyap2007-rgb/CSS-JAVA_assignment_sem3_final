@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f1f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: white;
+            border-bottom: 2px solid #ead5df;
+        }
+
+        .logo {
+            color: #713d5c;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #493044;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c06b91;
+        }
+
+        .join-btn {
+            padding: 10px 18px;
+            background: #713d5c;
+            color: white !important;
+            border-radius: 7px;
+        }
+
+        .join-btn:hover {
+            background: #a45d80;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            color: #493044;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #786675;
+            line-height: 1.7;
+        }
+
+        /* Responsive menu */
+        @media (max-width: 650px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 22px 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Bloom.</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="join-btn">Join Us ↗</a></li>
+        </ul>
+    </nav>
+
+    <main class="hero">
+        <h1>Make Room for Creativity ✿</h1>
+        <p>
+            Explore ideas, learn new skills, and create
+            something beautiful every day.
+        </p>
+    </main>
+
+</body>
+</html>

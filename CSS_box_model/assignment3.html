@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #241a29;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            width: 380px;
+            max-width: 100%;
+            background: #fff8fc;
+            border: 1px solid #dcb9d3;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px #00000050;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-6px);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #70496f, #422c49);
+            text-align: center;
+            padding: 30px 20px;
+            color: white;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 15px;
+            border: 3px solid #edc4df;
+            border-radius: 50%;
+            background: #f9e6f1;
+            color: #70496f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .header h1 {
+            font-size: 25px;
+            margin-bottom: 7px;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #f0dce9;
+        }
+
+        /* Card Details */
+        .details {
+            padding: 25px;
+        }
+
+        .about {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .about p {
+            color: #756578;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 16px;
+            color: #70496f;
+            margin-bottom: 10px;
+        }
+
+        .education {
+            padding: 12px;
+            background: #f5e9f2;
+            border-left: 3px solid #b67ba7;
+            border-radius: 6px;
+        }
+
+        .education p {
+            font-size: 13px;
+            color: #66556a;
+            line-height: 1.6;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill {
+            padding: 7px 12px;
+            background: #f2e1ee;
+            color: #70496f;
+            border: 1px solid #dfc2d9;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        /* Hobbies */
+        .hobbies {
+            color: #756578;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        /* Social Links */
+        .socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .socials a {
+            flex: 1;
+            text-align: center;
+            padding: 10px 5px;
+            border: 1px solid #70496f;
+            border-radius: 8px;
+            color: #70496f;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            background: #70496f;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #f3e5ef;
+            color: #876d86;
+            font-size: 12px;
+            border-top: 1px solid #e5d1e1;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 420px) {
+            .details {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="profile-card">
+
+        <header class="header">
+            <div class="avatar">AK</div>
+            <h1>Anya Kashyap</h1>
+            <p>BCA (Artificial Intelligence) Student</p>
+        </header>
+
+        <div class="details">
+
+            <section class="about">
+                <p>
+                    Hey! I'm a curious learner who enjoys technology,
+                    creative ideas and discovering something new every day.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>🎓 Education</h2>
+                <div class="education">
+                    <p><strong>BCA — Artificial Intelligence</strong></p>
+                    <p>Invertis University</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>💻 My Skills</h2>
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">Java</span>
+                    <span class="skill">Power BI</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🌷 Things I Enjoy</h2>
+                <p class="hobbies">
+                    Creative designing · Learning tech · Reading ·
+                    Exploring new ideas
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Let's Connect</h2>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/"
+                       target="_blank" rel="noopener">LinkedIn ↗</a>
+                    <a href="https://github.com/"
+                       target="_blank" rel="noopener">GitHub ↗</a>
+                    <a href="mailto:yourname@email.com">Email</a>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            Growing at my own pace ✦
+        </footer>
+
+    </main>
+
+</body>
+</html>

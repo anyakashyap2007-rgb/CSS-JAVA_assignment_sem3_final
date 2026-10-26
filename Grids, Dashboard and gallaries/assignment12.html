@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f4ef;
+            color: #302a25;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: #4b3b32;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-family: Georgia, serif;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #e5c7a8;
+        }
+
+        /* Introduction */
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: #9a6c4b;
+        }
+
+        .hero p {
+            max-width: 550px;
+            margin: 0 auto;
+            color: #6e6259;
+        }
+
+        /* Projects */
+        .projects {
+            padding: 30px 8% 60px;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: Georgia, serif;
+            font-size: 30px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e8dfd6;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px #00000012;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: #76543d;
+        }
+
+        .project-card p {
+            color: #6e6259;
+            font-size: 14px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #e9dfd4;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .contact p {
+            margin-top: 8px;
+        }
+
+        footer {
+            background: #4b3b32;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        /* Tablet */
+        @media (max-width: 800px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 550px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .projects {
+                padding: 20px 6% 40px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>MyPortfolio</h2>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Hello, I'm <span>Aspiring Developer</span></h1>
+        <p>
+            I am learning web development and building creative
+            projects using HTML and CSS. Welcome to my portfolio!
+        </p>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Profile Card</h3>
+                <p>
+                    A simple profile card created using HTML,
+                    CSS, padding, borders, and shadows.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Product Grid</h3>
+                <p>
+                    A product display page using CSS Grid,
+                    hover effects, and responsive layouts.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Photo Gallery</h3>
+                <p>
+                    A photo gallery featuring image layouts
+                    and a clean, attractive design.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's Connect</h2>
+        <p>Email: hello@example.com</p>
+    </section>
+
+    <footer>
+        <p>© 2026 MyPortfolio | Built with HTML & CSS</p>
+    </footer>
+
+</body>
+</html>

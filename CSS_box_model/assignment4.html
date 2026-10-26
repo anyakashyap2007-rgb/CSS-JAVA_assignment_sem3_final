@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Studio | Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f1f3;
+            color: #382536;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background-color: #fffafc;
+            border-bottom: 1px solid #ead8e1;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #713d5c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #60465a;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c06b91;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 55px auto;
+            padding: 55px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: linear-gradient(135deg, #fffafc, #f0dce7);
+            border: 1px solid #e7cedc;
+            border-radius: 24px;
+            box-shadow: 0 12px 30px rgba(76, 37, 62, 0.10);
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            margin-bottom: 18px;
+            background-color: #f0dce7;
+            color: #713d5c;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        h1 span {
+            color: #ad6487;
+        }
+
+        .description {
+            max-width: 430px;
+            margin-bottom: 25px;
+            color: #6f5a68;
+            font-size: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #713d5c;
+            color: white;
+            text-decoration: none;
+            border: 2px solid #713d5c;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: transparent;
+            color: #713d5c;
+            transform: translateY(-3px);
+        }
+
+        .hero-art {
+            flex: 1;
+            min-height: 290px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e6c6d7;
+            border: 8px solid #fffafc;
+            border-radius: 45% 45% 18px 18px;
+            box-shadow: 0 8px 20px rgba(76, 37, 62, 0.12);
+        }
+
+        .flower {
+            font-size: 120px;
+            filter: drop-shadow(0 8px 5px rgba(76, 37, 62, 0.12));
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto 55px;
+            padding: 0 20px;
+        }
+
+        .feature {
+            flex: 1;
+            padding: 24px;
+            background-color: #fffafc;
+            border: 1px solid #ead8e1;
+            border-radius: 14px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(76, 37, 62, 0.10);
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+            color: #713d5c;
+        }
+
+        .feature p {
+            color: #6f5a68;
+            font-size: 14px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #382536;
+            color: #f8eaf1;
+            font-size: 13px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .hero {
+                flex-direction: column;
+                margin: 25px 15px;
+                padding: 35px 25px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-art {
+                width: 100%;
+                min-height: 220px;
+            }
+
+            .flower {
+                font-size: 95px;
+            }
+
+            .features {
+                flex-direction: column;
+                margin: 0 15px 35px;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Bloom Studio ✿</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="tag">MADE WITH LOVE</span>
+
+                <h1>Small Things,<br>
+                    <span>Beautiful Moments.</span>
+                </h1>
+
+                <p class="description">
+                    Discover thoughtful handmade creations designed
+                    to add a little beauty, warmth, and creativity
+                    to your everyday life.
+                </p>
+
+                <a href="#collections" class="button">
+                    Explore Collection →
+                </a>
+            </div>
+
+            <div class="hero-art">
+                <div class="flower">🌷</div>
+            </div>
+        </section>
+
+        <section class="features" id="collections">
+            <div class="feature">
+                <h3>🌸 Handmade</h3>
+                <p>Every piece is created with care and attention.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🎀 Thoughtful</h3>
+                <p>Simple designs that make meaningful gifts.</p>
+            </div>
+
+            <div class="feature">
+                <h3>✨ Unique</h3>
+                <p>Little details that make every creation special.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Bloom Studio | Created with creativity and care.
+    </footer>
+
+</body>
+</html>

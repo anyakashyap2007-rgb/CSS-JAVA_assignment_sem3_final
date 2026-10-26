@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio</title>
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1721;
+            color: #f8edf5;
+            padding: 30px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #68445f;
+            border-radius: 20px;
+            background-color: #2b202f;
+            box-shadow: 0 10px 30px #100c12;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 25px 10px 35px;
+            border-bottom: 1px solid #68445f;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+            color: #f0b6d5;
+        }
+
+        header p {
+            color: #d0bfd0;
+            line-height: 1.6;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 25px;
+            border: 1px solid #76516d;
+            border-radius: 15px;
+            background-color: #39283d;
+            box-shadow: 0 5px 15px #160f19;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #f0b6d5;
+        }
+
+        .card h2 {
+            color: #f0b6d5;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #dfd1df;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 9px 14px;
+            border: 1px solid #d99abd;
+            border-radius: 8px;
+            color: #f8d8e9;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            background-color: #d99abd;
+            color: #251827;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #68445f;
+            color: #c5b2c7;
+            font-size: 13px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Creative Studio ✦</h1>
+            <p>Explore creativity, design and beautiful ideas.</p>
+        </header>
+
+        <section class="cards">
+
+            <article class="card">
+                <h2>Visual Design</h2>
+                <p>
+                    Discover the art of colors, layouts and typography
+                    to create attractive digital experiences.
+                </p>
+                <a href="#">Explore More ↗</a>
+            </article>
+
+            <article class="card">
+                <h2>Creative Ideas</h2>
+                <p>
+                    Turn your imagination into meaningful projects
+                    through experimentation and thoughtful design.
+                </p>
+                <a href="#">Discover More ↗</a>
+            </article>
+
+            <article class="card">
+                <h2>Daily Inspiration</h2>
+                <p>
+                    Find inspiration in everyday moments and keep
+                    learning something new with every project.
+                </p>
+                <a href="#">Read More ↗</a>
+            </article>
+
+        </section>
+
+        <footer>
+            Made with creativity and passion ♥
+        </footer>
+
+    </main>
+
+</body>
+</html>

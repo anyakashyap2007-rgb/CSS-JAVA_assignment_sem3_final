@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush Bloom</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8eff3;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border: 1px solid #ead5df;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px #4b23331a;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .product-image {
+            height: 190px;
+            background: #f1dce6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 75px;
+        }
+
+        .content {
+            padding: 22px;
+        }
+
+        .tag {
+            color: #b16a8b;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            margin: 8px 0;
+            color: #493044;
+        }
+
+        p {
+            color: #786675;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #f0e2e9;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #713d5c;
+        }
+
+        .button {
+            padding: 9px 13px;
+            background: #713d5c;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+        .button:hover {
+            background: #a45d80;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="product-image">🌷</div>
+
+        <div class="content">
+            <span class="tag">Handmade Collection</span>
+
+            <h2>Blush Bloom</h2>
+
+            <p>
+                A little handmade flower to add beauty
+                and warmth to your everyday life.
+            </p>
+
+            <div class="bottom">
+                <span class="price">₹299</span>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

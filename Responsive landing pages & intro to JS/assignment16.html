@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3eee8;
+            color: #40352e;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px #00000015;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, serif;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #87796f;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #d9cec4;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #9b7860;
+            border-color: transparent;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 13px;
+            background: #594637;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #80634d;
+        }
+
+        #result {
+            display: none;
+            margin-top: 25px;
+            padding: 18px;
+            background: #f7f1ea;
+            border-radius: 8px;
+            line-height: 1.9;
+        }
+
+        #message {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .error {
+            color: #b42318;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Grade Calculator</h1>
+        <p class="subtitle">Enter your marks out of 100</p>
+
+        <form id="gradeForm">
+            <label for="english">English</label>
+            <input type="number" id="english" min="0" max="100"
+                   step="any" required>
+
+            <label for="maths">Mathematics</label>
+            <input type="number" id="maths" min="0" max="100"
+                   step="any" required>
+
+            <label for="computer">Computer Science</label>
+            <input type="number" id="computer" min="0" max="100"
+                   step="any" required>
+
+            <label for="science">Science</label>
+            <input type="number" id="science" min="0" max="100"
+                   step="any" required>
+
+            <label for="history">History</label>
+            <input type="number" id="history" min="0" max="100"
+                   step="any" required>
+
+            <button type="submit">Calculate Grade</button>
+        </form>
+
+        <p id="error" class="error"></p>
+
+        <div id="result" aria-live="polite">
+            <h3>Result Summary</h3>
+            <p>Total Marks: <span id="total"></span> / 500</p>
+            <p>Percentage: <span id="percentage"></span>%</p>
+            <p>Grade: <span id="grade"></span></p>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("gradeForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const english = Number(document.getElementById("english").value);
+            const maths = Number(document.getElementById("maths").value);
+            const computer = Number(document.getElementById("computer").value);
+            const science = Number(document.getElementById("science").value);
+            const history = Number(document.getElementById("history").value);
+
+            const marks = [english, maths, computer, science, history];
+
+            const error = document.getElementById("error");
+            const result = document.getElementById("result");
+
+            error.textContent = "";
+            result.style.display = "none";
+
+            // Validate marks
+            for (let i = 0; i < marks.length; i++) {
+                if (marks[i] < 0 || marks[i] > 100) {
+                    error.textContent =
+                        "Each subject's marks must be between 0 and 100.";
+                    return;
+                }
+            }
+
+            // Calculate total and percentage
+            let total = 0;
+
+            for (let i = 0; i < marks.length; i++) {
+                total += marks[i];
+            }
+
+            let percentage = (total / 500) * 100;
+            let grade;
+
+            // Grade using if-else-if
+            if (percentage >= 90) {
+                grade = "A+";
+            } else if (percentage >= 80) {
+                grade = "A";
+            } else if (percentage >= 70) {
+                grade = "B";
+            } else if (percentage >= 60) {
+                grade = "C";
+            } else if (percentage >= 40) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            // Check whether the student passed
+            let message;
+
+            if (marks.some(mark => mark < 33)) {
+                message = "Fail — at least one subject is below 33.";
+            } else {
+                message = "Pass — congratulations!";
+            }
+
+            // Display results
+            document.getElementById("total").textContent = total;
+            document.getElementById("percentage").textContent =
+                percentage.toFixed(2);
+            document.getElementById("grade").textContent = grade;
+            document.getElementById("message").textContent = message;
+
+            result.style.display = "block";
+        });
+    </script>
+
+</body>
+</html>

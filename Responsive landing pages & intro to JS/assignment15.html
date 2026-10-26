@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4eee8;
+            color: #3f342e;
+            padding: 30px 15px;
+        }
+
+        .profile {
+            max-width: 450px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px #49382b20;
+        }
+
+        .header {
+            background: #5c4638;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .avatar {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #ead7c4;
+            color: #5c4638;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .header p {
+            margin-top: 8px;
+            color: #e6d7cb;
+        }
+
+        .details {
+            padding: 25px;
+        }
+
+        .details p {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee5dd;
+        }
+
+        .details strong {
+            color: #806047;
+        }
+
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skills h3 {
+            margin-bottom: 12px;
+        }
+
+        .skill {
+            display: inline-block;
+            background: #eee3d8;
+            color: #5c4638;
+            padding: 7px 12px;
+            margin: 4px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 12px;
+            background: #e8f3e8;
+            color: #28643a;
+            border-radius: 6px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile">
+        <div class="header">
+            <div class="avatar" id="avatar"></div>
+            <h1 id="studentName"></h1>
+            <p id="course"></p>
+        </div>
+
+        <div class="details">
+            <p><strong>Age:</strong> <span id="age"></span></p>
+            <p><strong>Semester:</strong> <span id="semester"></span></p>
+            <p><strong>CGPA:</strong> <span id="cgpa"></span></p>
+            <p><strong>Scholarship:</strong> <span id="scholarship"></span></p>
+
+            <div class="skills">
+                <h3>My Skills</h3>
+                <div id="skillsList"></div>
+            </div>
+
+            <div class="status" id="status"></div>
+        </div>
+    </div>
+
+    <script>
+        // String variables
+        let studentName = "Ananya Sharma";
+        let course = "BCA - Artificial Intelligence";
+
+        // Number variables
+        let age = 19;
+        let semester = 3;
+        let cgpa = 8.5;
+
+        // Boolean variable
+        let hasScholarship = true;
+
+        // Array variable
+        let skills = ["HTML", "CSS", "JavaScript"];
+
+        // Object variable
+        let student = {
+            city: "Bareilly",
+            college: "ABC University"
+        };
+
+        // Display student information
+        document.getElementById("avatar").textContent =
+            studentName.charAt(0);
+
+        document.getElementById("studentName").textContent =
+            studentName;
+
+        document.getElementById("course").textContent =
+            course;
+
+        document.getElementById("age").textContent = age;
+        document.getElementById("semester").textContent = semester;
+        document.getElementById("cgpa").textContent = cgpa;
+
+        document.getElementById("scholarship").textContent =
+            hasScholarship ? "Yes" : "No";
+
+        // Display array items
+        let skillsHTML = "";
+
+        for (let i = 0; i < skills.length; i++) {
+            skillsHTML += `<span class="skill">${skills[i]}</span>`;
+        }
+
+        document.getElementById("skillsList").innerHTML =
+            skillsHTML;
+
+        // Display object properties
+        document.getElementById("status").textContent =
+            student.city + " | " + student.college;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eee5ed;
+            color: #332638;
+            padding: 30px 15px;
+            line-height: 1.6;
+        }
+
+        /* Main Resume Container */
+        .resume {
+            max-width: 900px;
+            margin: auto;
+            background-color: #fffafa;
+            border: 1px solid #d9c3d5;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px #33263825;
+        }
+
+        /* Resume Header */
+        .header {
+            background-color: #352439;
+            color: white;
+            padding: 35px;
+            border-bottom: 5px solid #d99abd;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+            color: #f2c4dc;
+        }
+
+        .header p {
+            color: #e4d3e3;
+        }
+
+        /* Two Column Layout */
+        .content {
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .left {
+            flex: 1;
+            padding-right: 20px;
+            border-right: 1px solid #dfcddd;
+        }
+
+        .right {
+            flex: 2;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 17px;
+            color: #92547f;
+            border-bottom: 2px solid #e5ccdf;
+            padding-bottom: 7px;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        p, li {
+            font-size: 14px;
+            color: #655568;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Skill Tags */
+        .skill {
+            display: inline-block;
+            background-color: #f3e3ef;
+            color: #684366;
+            border: 1px solid #dfc1d9;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin: 4px 3px 4px 0;
+            font-size: 12px;
+        }
+
+        .project {
+            padding: 12px;
+            border-left: 3px solid #bd80a8;
+            background-color: #faf1f7;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            margin-top: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 18px;
+            background-color: #352439;
+            color: #e4d3e3;
+            font-size: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 650px) {
+            .content {
+                flex-direction: column;
+                padding: 22px;
+            }
+
+            .left {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid #dfcddd;
+                padding-bottom: 15px;
+            }
+
+            .header {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="resume">
+
+        <header class="header">
+            <h1>Anya Kashyap</h1>
+            <p>BCA (Artificial Intelligence) Student</p>
+            <p>Aspiring Web Developer | Creative Learner</p>
+        </header>
+
+        <div class="content">
+
+            <aside class="left">
+
+                <section>
+                    <h2>Contact</h2>
+                    <p>Email: anyakashyap2007@email.com</p>
+                    <p>LinkedIn: linkedin.com/in/anyakasyap-ai</p>
+                </section>
+
+                <section>
+                    <h2>Technical Skills</h2>
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">Python Basics</span>
+                    <span class="skill">Java Basics</span>
+                    <span class="skill">Power BI</span>
+                    <span class="skill">Git</span>
+                </section>
+
+                <section>
+                    <h2>Strengths</h2>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Creative Thinking</li>
+                        <li>Communication</li>
+                        <li>Quick Learning</li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <div class="right">
+
+                <section>
+                    <h2>Professional Summary</h2>
+                    <p>
+                        A motivated BCA Artificial Intelligence student
+                        developing skills in web development, programming
+                        and data analysis. Interested in building practical
+                        projects and learning through hands-on experience.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Education</h2>
+                    <h3>Bachelor of Computer Applications</h3>
+                    <p>Specialization: Artificial Intelligence</p>
+                    <p>Invertis University</p>
+                    <p>Currently Pursuing</p>
+                </section>
+
+                <section>
+                    <h2>Projects</h2>
+
+                    <div class="project">
+                        <h3>Creative Studio Webpage</h3>
+                        <p>
+                            Created a styled webpage using HTML and CSS,
+                            including cards, spacing, borders and hover effects.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Sales Dashboard</h3>
+                        <p>
+                            Developed a dashboard concept to organize sales
+                            data and present useful information visually.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Career Objective</h2>
+                    <p>
+                        To strengthen my technical foundation, create
+                        meaningful projects and gain practical experience
+                        through internships and collaborative work.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            Learning • Building • Growing
+        </footer>
+
+    </main>
+
+</body>
+</html>
